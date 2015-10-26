@@ -96,7 +96,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Library\Communication\ArduinoGateway.cs" />
     <Compile Include="Library\DistanceMapper.cs" />
+    <Compile Include="Library\Sensor\UltrasonicDistanceSensor.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

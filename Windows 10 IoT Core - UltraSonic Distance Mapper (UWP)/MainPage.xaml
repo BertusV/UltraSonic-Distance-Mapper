@@ -31,13 +31,13 @@
             <!-- Scanner Line -->
             <Line Name="Line_Scanner" X1="0" X2="0" Y1="300" Y2="0" Stroke="#0f0" StrokeThickness="2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
                 <Line.RenderTransform>
-                    <RotateTransform x:Name="a1" CenterX="0" CenterY="300" Angle="0" />
+                    <RotateTransform x:Name="ScannerLine" CenterX="0" CenterY="300" Angle="0" />
                 </Line.RenderTransform>
             </Line>
 
             <!-- Object(s) : Angle & Distance -->
             <Grid Name="Grid_Mapper">
-                
+
                 <!--<Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="Auto" Height="Auto" RenderTransformOrigin="0,1">
                     <Grid.RenderTransform>
                         <CompositeTransform x:Name="ObjectA_Angle" Rotation="20"/>
@@ -105,7 +105,7 @@
                     <Line Grid.Row="1" Name="ObjectF_Distance" X1="0" X2="0" Y1="253" Y2="0" Stroke="#0000" StrokeThickness="2"/>
                 </Grid>-->
             </Grid>
-            
+
             <!-- Legends -->
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="#0f0" Text="300" Margin="754.147,0,213.68,102.399" FontSize="10" RenderTransformOrigin="0.5,0.5">
                 <TextBlock.RenderTransform>
@@ -138,6 +138,5 @@
                 </TextBlock.RenderTransform>
             </TextBlock>
         </Grid>
-        <Button x:Name="Start" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Start_Click"/>
     </Grid>
 </Page>
