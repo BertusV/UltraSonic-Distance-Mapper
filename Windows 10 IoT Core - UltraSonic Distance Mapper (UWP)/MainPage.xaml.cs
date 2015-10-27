@@ -27,11 +27,13 @@ namespace Windows_10_IoT_Core___UltraSonic_Distance_Mapper__UWP_
             Library.Sensor.UltrasonicDistanceSensor DistanceSensor = new Library.Sensor.UltrasonicDistanceSensor(Library.Sensor.UltrasonicDistanceSensor.AvailableGpioPin.GpioPin_22, Library.Sensor.UltrasonicDistanceSensor.AvailableGpioPin.GpioPin_27);
 
             /*
-                Holds current rotation
-                Description : Actual Data Feed To Servo : Assumption
-                Left Most   :   0                       : -70
-                Center      :  70                       :   0
-                Right Most  : 140                       : +70
+                'CurrentRotation' Holds the current rotation
+                ============|===========================|===========
+                Description | Actual Data Feed To Servo | Assumption
+                ============|===========================|===========
+                Left Most   |   0                       | -70
+                Center      |  70                       |   0
+                Right Most  | 140                       | +70
             */
             byte CurrentRotation = 70;      // << HOLDS ACTUAL DATA TO BE FEED TO SERVO
 
