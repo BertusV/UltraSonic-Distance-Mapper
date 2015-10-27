@@ -32,7 +32,12 @@ namespace Windows_10_IoT_Core___UltraSonic_Distance_Mapper__UWP_.Library.Communi
         private static string AQS;
         private static DeviceInformationCollection DIS;
 
-        public static async System.Threading.Tasks.Task<byte[]> Write(byte Pos)
+        /// <summary>
+        /// Writes 
+        /// </summary>
+        /// <param name="Pos"></param>
+        /// <returns></returns>
+        public static async System.Threading.Tasks.Task<byte[]> MoveServo(byte Pos)
         {
             byte[] Response = new byte[1];
 

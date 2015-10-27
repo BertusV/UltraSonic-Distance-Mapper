@@ -43,7 +43,7 @@ namespace Windows_10_IoT_Core___UltraSonic_Distance_Mapper__UWP_
             int Direction = 1;
 
             double Distance;
-            byte DUMMY;
+            byte Temp;
 
             /* Scan infinitely */
             while (true)
@@ -66,12 +66,11 @@ namespace Windows_10_IoT_Core___UltraSonic_Distance_Mapper__UWP_
                     Thus servo will move between:    00 - 70 - 140  (Actual Angle)
                                                     -70 -  0 - +70  (Assumed Angle)
                 */
-
-                DUMMY = (byte)((140 - CurrentRotation > 0) ? 140 - CurrentRotation : 0);
+                Temp = (byte)((140 - CurrentRotation > 0) ? 140 - CurrentRotation : 0);
 
                 /* Send angle to the gateway in a byte */
                 /* A dummy byte will be returned from the function */
-                DUMMY = Library.Communication.ArduinoGateway.Write(DUMMY).Result[0];
+                Temp = Library.Communication.ArduinoGateway.MoveServo(Temp).Result[0];
 
                 /*
                     If right direction is fully mapped, change scanning direction to left.
