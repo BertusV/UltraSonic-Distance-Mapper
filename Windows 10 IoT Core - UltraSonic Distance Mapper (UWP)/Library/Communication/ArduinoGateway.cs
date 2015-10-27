@@ -33,11 +33,11 @@ namespace Windows_10_IoT_Core___UltraSonic_Distance_Mapper__UWP_.Library.Communi
         private static DeviceInformationCollection DIS;
 
         /// <summary>
-        /// Writes 
+        /// Moves servo to specified angle
         /// </summary>
-        /// <param name="Pos"></param>
+        /// <param name="Angle">Angle to be moved</param>
         /// <returns></returns>
-        public static async System.Threading.Tasks.Task<byte[]> MoveServo(byte Pos)
+        public static async System.Threading.Tasks.Task<byte[]> MoveServo(byte Angle)
         {
             byte[] Response = new byte[1];
 
@@ -59,7 +59,7 @@ namespace Windows_10_IoT_Core___UltraSonic_Distance_Mapper__UWP_.Library.Communi
                 using (I2cDevice Device = await I2cDevice.FromIdAsync(DIS[0].Id, Settings))
                 {
                     /* Send byte to the gateway to move servo at specified position */
-                    Device.Write(new byte[] { Pos });
+                    Device.Write(new byte[] { Angle });
                 }
             }
             catch (Exception)
